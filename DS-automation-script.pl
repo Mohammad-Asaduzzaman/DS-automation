@@ -1,11 +1,13 @@
+#Initializing the Code
 use MdmDiscoveryScript;
 use strict;
 
+#Variables
 my $filename;
 my $mdmDocument;
 my $i;
 
-#Create the output file
+#Creating the output file
 open my $fh, '>', 'Location\to\save\the\output\comma-separated\txt\file\bondtypes.txt';
 open STDOUT, '>&', $fh;
 
@@ -19,7 +21,6 @@ for ($i = 0; $i < 2501; $i++) {
     my $filename = $basename.$numname.".pdb";
     
     #Opening a single pdb file with the name from the variable $filename
-
     $mdmDocument = DiscoveryScript::Open(
     {
     Path => $filename,
@@ -27,13 +28,18 @@ for ($i = 0; $i < 2501; $i++) {
     }
     );
     
+    #Selecting all atoms of the pdb file
     my $allAtoms = $mdmDocument->Atoms;
+    
+    #Extracting all the non-bond information
     my $nonbondMonitor = $mdmDocument->CreateNonbondMonitor($allAtoms);
     my $nonbonds = $nonbondMonitor->Nonbonds;
-
+    
+    #Extracting the number of alkyltype non-bond from all the non-bond information and printing it 
     my $hBonds = $nonbondMonitor->NonbondsOfType(Mdm::alkylType);
     printf "alkylType    %d\n", $hBonds->Count;
 
+    #Extracting the number of attractiveChargeType non-bond from all the non-bond information and printing it
     my $hBonds = $nonbondMonitor->NonbondsOfType(Mdm::attractiveChargeType);
     printf "attractiveChargeType    %d\n", $hBonds->Count;
 
