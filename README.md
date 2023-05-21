@@ -8,7 +8,7 @@ Interaction Analysis Automation for Biovia Discovery Studio Visualizer
 5. Type: perl.bat "%userprofile%\Downloads\DS-automation-script.pl" 
 6. If it worked successfully nothing will be shown on command prompt. Close and reopen the output file (i.e bondtype.txt) after some times from your 
     selected output folder and open it to see how much the work progress.
-6. After the code run completely you will get 'bondtype.txt' file in the selected output folder. Open this file in excel and use comma (,) as delimiter.
+6. After the code run completely you will get 'bondtype.txt' file in the selected output folder. Open this file in excel and use 'Space' as delimiter.
 7. You now can use any operation in excel on your data to analyze the interaction data.
 
 
