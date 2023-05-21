@@ -8,8 +8,8 @@ my $mdmDocument;
 my $i;
 
 #Creating the output file
-# Modify this line to select the location of your output 'bondtypes.txt' file
-open my $fh, '>', 'Location to save the output comma-separated txt file\bondtypes.txt';
+# Modify this line to select the location of your output 'bondtypes.txt' file. Replace backward slash (\) with forward slash (/). Ex: C:\Program Files to C:/Program Files
+open my $fh, '>', 'Location to save the output comma-separated txt file/bondtypes.txt';
 open STDOUT, '>&', $fh;
 
 #Looping multiple pdb file
@@ -18,8 +18,8 @@ for ($i = 0; $i < 101; $i++) {
     
     printf "Frame${i}BondType    NumberOfBonds\n";
    
-    # Modify this line
-    my $basename = "Location to the pdb files\Name of the file excluding the serial number(i.e. FA-GAS-RDF for FA-GAS-RDF00001.pdb)";
+    # Modify this line. Replace backward slash (\) with forward slash (/). Ex: C:\Program Files to C:/Program Files
+    my $basename = "Location to the pdb files/Name of the file excluding the serial number(i.e. FA-GAS-RDF for FA-GAS-RDF00001.pdb)";
     
     # Modify this line according to the format of the serial number of your file. If your file name is FA-GAS-RDF00001.pdb (5 digits) then use:
     my $numname = sprintf"%05d", $i;
