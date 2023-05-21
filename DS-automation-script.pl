@@ -13,8 +13,8 @@ open my $fh, '>', 'Location to save the output comma-separated txt file/bondtype
 open STDOUT, '>&', $fh;
 
 #Looping multiple pdb file
-# Modify this line to select the range of your file. If you have 100 pdb files to analyze then use:
-for ($i = 0; $i < 101; $i++) {
+# Modify this line to select the range of your file. If you have 100 pdb files to analyze and the first file is FA-GAS-RDF00001.pdb then use:
+for ($i = 1; $i < 101; $i++) {
     
     printf "Frame${i}BondType    NumberOfBonds\n";
    
