@@ -19,7 +19,7 @@ for ($i = 1; $i < 101; $i++) {
     printf "Frame${i}BondType    NumberOfBonds\n";
    
     # Modify this line. Replace backward slash (\) with forward slash (/). Ex: C:\Program Files to C:/Program Files
-    my $basename = "Location to the pdb files/Name of the file excluding the serial number(i.e. FA-GAS-RDF for FA-GAS-RDF00001.pdb)";
+    my $basename = "Location to the pdb files/Name of the file excluding the serial number(i.e. write FA-GAS-RDF for the file FA-GAS-RDF00001.pdb)";
     
     # Modify this line according to the format of the serial number of your file. If your file name is FA-GAS-RDF00001.pdb (5 digits) then use:
     my $numname = sprintf"%05d", $i;
