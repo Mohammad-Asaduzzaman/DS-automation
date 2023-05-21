@@ -82,9 +82,6 @@ for ($i = 0; $i < 101; $i++) {
     my $hBonds = $nonbondMonitor->NonbondsOfType(Mdm::piPiTShapedType);
     printf "piPiTShapedType    %d\n", $hBonds->Count;
  
-    my $hBonds = $nonbondMonitor->NonbondsOfType(Mdm::alkylType);
-    printf "alkylType    %d\n", $hBonds->Count;
-
     my $hBonds = $nonbondMonitor->NonbondsOfType(Mdm::piSigmaType);
     printf "piSigmaType    %d\n", $hBonds->Count;
 
