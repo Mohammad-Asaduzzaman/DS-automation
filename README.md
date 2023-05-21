@@ -1,5 +1,5 @@
 # DS-automation
-Interaction Analysis Automation for Biovia Discovery studio visualizer
+Interaction Analysis Automation for Biovia Discovery Studio Visualizer
 
 1. Download the DS-automation-script.pl file
 2. Open Command Prompt from start menu
